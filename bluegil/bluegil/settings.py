@@ -25,7 +25,7 @@ SECRET_KEY = 'tf3mvr0%x4y579f&f$ha+sdc8ad)+^++9t(mreftlu2ydxi8)+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,7 +76,12 @@ WSGI_APPLICATION = 'bluegil.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'bluegildb',
+	'USER': 'postgres',
+	'PASSWORD': '1234',
+	'HOST': '127.0.0.1',
+	'PORT': '5432',
+
     }
 }
 
